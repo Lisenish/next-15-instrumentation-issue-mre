@@ -6,7 +6,7 @@ export async function register() {
 
     console.log(`Environment variables are loaded`);
     console.log(
-      "process.env.SOME_GSM_SECRET in instrumentation",
+      "process.env.SOME_GSM_SECRET in instrumentation:",
       process.env.SOME_GSM_SECRET
     );
   }
