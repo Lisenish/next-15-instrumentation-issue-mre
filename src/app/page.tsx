@@ -5,7 +5,7 @@ import {
   globalSingleton,
 } from "@/global-side-effect-file";
 
-// export const dynamic = "force-dynamic";
+export const dynamic = "force-dynamic";
 
 export default function Home() {
   return (
@@ -19,7 +19,7 @@ export default function Home() {
           height={38}
           priority
         />
-        Secret value: {globalSingleton.someSecret ?? "not set"}
+        Secret value: {globalSingleton.someSecret ?? "not set"} <br />
         Dynamic secret value: {getSecretValueDynamically() ?? "not set"}
       </main>
       <footer className={styles.footer}>
