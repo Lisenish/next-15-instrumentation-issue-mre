@@ -1,5 +1,11 @@
 import Image from "next/image";
 import styles from "./page.module.css";
+import {
+  getSecretValueDynamically,
+  globalSingleton,
+} from "@/global-side-effect-file";
+
+// export const dynamic = "force-dynamic";
 
 export default function Home() {
   return (
@@ -13,7 +19,8 @@ export default function Home() {
           height={38}
           priority
         />
-        Secret value: {process.env.SOME_GSM_SECRET ?? "not set"}
+        Secret value: {globalSingleton.someSecret ?? "not set"}
+        Dynamic secret value: {getSecretValueDynamically() ?? "not set"}
       </main>
       <footer className={styles.footer}>
         <a
